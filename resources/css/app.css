@@ -9,3 +9,32 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+@import 'tailwindcss/preflight';
+@tailwind utilities;
+
+@layer components {
+    .btn-primary {
+        @apply bg-petra-orange hover:bg-orange-600 text-white font-bold py-2 px-4 rounded transition duration-200;
+    }
+
+    .btn-secondary {
+        @apply bg-petra-blue hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition duration-200;
+    }
+
+    .btn-danger {
+        @apply bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-200;
+    }
+
+    .card {
+        @apply bg-white rounded-lg shadow-md p-6;
+    }
+
+    .input-field {
+        @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-petra-orange focus:border-transparent;
+    }
+
+    .select-field {
+        @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-petra-orange focus:border-transparent bg-white;
+    }
+}
